@@ -1,0 +1,9 @@
+{
+    "tabWidth": 4,
+    "experimentalTernaries": true,
+    "bracketSpacing": true,
+    "trailingComma": "none",
+    "arrowParens": "always",
+    "plugins": ["prettier-plugin-tailwindcss"],
+    "semi": false
+}
