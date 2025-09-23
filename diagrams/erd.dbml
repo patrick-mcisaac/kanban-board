@@ -1,0 +1,16 @@
+Table issues {
+    id int [pk, increment]
+    description varchar
+   progressionId int [ref: > progressions.id]
+}
+
+Table progressions {
+    id int [pk, increment]
+    name varchar
+}
+
+Table issueProgressions {
+    id int [pk, increment]
+    progressionId int [ref: > progressions.id]
+    issuesId int [ref: > issues.id]
+}
