@@ -3,22 +3,22 @@
     {
       "id": 1,
       "description": "Fix login authentication bug",
-      "progressionId": 1
+      "progressionId": 2
     },
     {
       "id": 2,
       "description": "Add user profile settings",
-      "progressionId": 2
+      "progressionId": 1
     },
     {
       "id": 3,
       "description": "Implement dark mode toggle",
-      "progressionId": 3
+      "progressionId": 2
     },
     {
       "id": 4,
       "description": "Update API documentation",
-      "progressionId": 1
+      "progressionId": 3
     }
   ],
   "progressions": [
