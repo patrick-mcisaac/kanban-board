@@ -1,4 +1,5 @@
 import { useIssuesContext } from "../../hooks/useIssuesContext"
+import { TaskCard } from "../taskCard/TaskCard"
 
 export const InProgress = () => {
     const { state } = useIssuesContext()
@@ -7,16 +8,7 @@ export const InProgress = () => {
             <h1 className="text-center text-2xl font-bold">In Progress</h1>
             {state.issues.map((i) => {
                 if (i.progressionId === 2) {
-                    return (
-                        <section
-                            key={i.id}
-                            className="flex h-[5rem] items-center justify-center border-1"
-                        >
-                            <h2 className="text-xl font-semibold tracking-wider">
-                                {i.description}
-                            </h2>
-                        </section>
-                    )
+                    return <TaskCard key={i.id} item={i} />
                 }
             })}
         </div>

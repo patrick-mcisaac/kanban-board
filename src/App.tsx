@@ -1,3 +1,4 @@
+import { DndContext } from "@dnd-kit/core"
 import { Done } from "./components/done/Done"
 import { InProgress } from "./components/inProgress/InProgress"
 import { IssuesProvider } from "./components/todo/IssuesProvider"
@@ -7,9 +8,11 @@ function App() {
     return (
         <div className="flex w-full justify-around">
             <IssuesProvider>
-                <ToDo />
-                <InProgress />
-                <Done />
+                <DndContext>
+                    <ToDo />
+                    <InProgress />
+                    <Done />
+                </DndContext>
             </IssuesProvider>
         </div>
     )
