@@ -3,7 +3,7 @@
     {
       "id": 1,
       "description": "Fix login authentication bug",
-      "progressionId": 2
+      "progressionId": 1
     },
     {
       "id": 2,
@@ -13,7 +13,7 @@
     {
       "id": 3,
       "description": "Implement dark mode toggle",
-      "progressionId": 1
+      "progressionId": 3
     },
     {
       "id": 4,

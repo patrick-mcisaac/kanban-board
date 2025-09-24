@@ -12,20 +12,19 @@ export const Column = ({ progression, issues }: ColumnProps) => {
         // get todo id
         id: String(progression.id)
     })
+
     return (
-        <div ref={setNodeRef} className="flex w-[25%] flex-col gap-3 border-1">
-            <h1 className="text-center text-2xl font-bold">
+        <div
+            id={`column-${progression.id}`}
+            ref={setNodeRef}
+            className="mt-[9rem] flex h-[40rem] w-[25%] flex-col gap-3 rounded-2xl bg-neutral-400 p-5 shadow-xs shadow-neutral-300"
+        >
+            <h1 className="text-center text-[3rem] font-bold tracking-wider text-neutral-100 text-shadow-black text-shadow-sm">
                 {progression.name}
             </h1>
             {issues.map((i) => {
                 if (i.progressionId === progression.id) {
-                    return (
-                        <TaskCard
-                            progression={progression}
-                            key={i.id}
-                            item={i}
-                        />
-                    )
+                    return <TaskCard key={i.id} item={i} />
                 }
             })}
         </div>

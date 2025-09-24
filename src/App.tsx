@@ -1,4 +1,8 @@
-import { DndContext, type DragEndEvent } from "@dnd-kit/core"
+import {
+    DndContext,
+    type DragEndEvent,
+    type DragMoveEvent
+} from "@dnd-kit/core"
 import { useIssuesContext } from "./hooks/useIssuesContext"
 import { useEffect } from "react"
 import { Column } from "./components/columns/Column"
@@ -25,8 +29,9 @@ function App() {
             updateIssue(copyTask, String(copyTask.id))
         }
     }
+
     return (
-        <div className="flex w-full justify-around">
+        <div className="flex min-h-[100vh] w-full justify-around bg-[#1e1e1e]">
             <DndContext onDragEnd={handleDragEnd}>
                 {state.progressions.map((p) => (
                     <Column key={p.id} progression={p} issues={state.issues} />

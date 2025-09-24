@@ -22,9 +22,9 @@ export const TaskCard = ({ item }: CardProps) => {
             {...listeners}
             {...attributes}
             id={String(item.id)}
-            className="flex h-[5rem] items-center justify-center border-1"
+            className="mt-2 flex h-[5rem] cursor-pointer items-center justify-center rounded-lg border-1 bg-neutral-700"
         >
-            <h1 className="text-xl font-semibold tracking-wider">
+            <h1 className="text-xl font-semibold tracking-wider text-neutral-200 text-shadow-black text-shadow-sm">
                 {item.description}
             </h1>
         </section>
