@@ -3,9 +3,11 @@ import type { ActionTypes } from "./Actions"
 
 export type IssuesContextTypes = {
     getIssues: () => void
+    updateIssue: (data: IssuesType, id: string) => void
+    getIssueProgressions: () => void
+    getProgressions: () => void
     state: StateType
     dispatch: React.Dispatch<ActionTypes>
-    getTodoIssues: () => void
 }
 
 export type IssuesType = {
@@ -15,21 +17,12 @@ export type IssuesType = {
     progression?: ProgressionsType
 }
 
-type ProgressionsType = {
+export type ProgressionsType = {
     id: number
     name: string
-}
-
-type IssueProgressionsType = {
-    id: number
-    progressionId: number
-    issuesId: number
 }
 
 export type StateType = {
     issues: IssuesType[]
     progressions: ProgressionsType[]
-    issueProgressions: IssueProgressionsType[]
 }
-
-//TODO: set up action types

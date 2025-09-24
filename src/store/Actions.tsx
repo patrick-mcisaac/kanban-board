@@ -1,8 +1,17 @@
-import type { IssuesType } from "./Types"
+import type { IssuesType, ProgressionsType } from "./Types"
 
-type Initial = {
-    type: "Initial"
+type Issues = {
+    type: "Issues"
     payload: IssuesType[]
 }
 
-export type ActionTypes = Initial
+type Progressions = {
+    type: "Progressions"
+    payload: ProgressionsType[]
+}
+
+type DragEnd = {
+    type: "DragEnd"
+    payload: IssuesType
+}
+export type ActionTypes = Issues | Progressions | DragEnd

@@ -5,10 +5,26 @@ import type { StateType } from "./Types"
 
 export const IssuesReducer = (state: StateType, action: ActionTypes) => {
     switch (action.type) {
-        case "Initial":
+        case "Issues":
             return {
                 ...state,
                 issues: [...action.payload]
+            }
+        case "IssueProgressions":
+            return {
+                ...state,
+                issueProgressions: [...action.payload]
+            }
+        case "Progressions":
+            return {
+                ...state,
+                progressions: [...action.payload]
+            }
+        case "DragEnd":
+            console.log(action.payload)
+
+            return {
+                ...state
             }
         default:
             return {
