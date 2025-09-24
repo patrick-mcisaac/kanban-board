@@ -1,38 +1,38 @@
 {
-    "issues": [
-        {
-            "id": 1,
-            "description": "Fix login authentication bug",
-            "progressionId": 1
-        },
-        {
-            "id": 2,
-            "description": "Add user profile settings",
-            "progressionId": 2
-        },
-        {
-            "id": 3,
-            "description": "Implement dark mode toggle",
-            "progressionId": 2
-        },
-        {
-            "id": 4,
-            "description": "Update API documentation",
-            "progressionId": 3
-        }
-    ],
-    "progressions": [
-        {
-            "id": 1,
-            "name": "To Do"
-        },
-        {
-            "id": 2,
-            "name": "In Progress"
-        },
-        {
-            "id": 3,
-            "name": "Done"
-        }
-    ]
+  "issues": [
+    {
+      "id": 1,
+      "description": "Fix login authentication bug",
+      "progressionId": 2
+    },
+    {
+      "id": 2,
+      "description": "Add user profile settings",
+      "progressionId": 2
+    },
+    {
+      "id": 3,
+      "description": "Implement dark mode toggle",
+      "progressionId": 1
+    },
+    {
+      "id": 4,
+      "description": "Update API documentation",
+      "progressionId": 1
+    }
+  ],
+  "progressions": [
+    {
+      "id": 1,
+      "name": "To Do"
+    },
+    {
+      "id": 2,
+      "name": "In Progress"
+    },
+    {
+      "id": 3,
+      "name": "Done"
+    }
+  ]
 }

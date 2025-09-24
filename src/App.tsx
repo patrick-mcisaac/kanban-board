@@ -1,16 +1,13 @@
 import { DndContext, type DragEndEvent } from "@dnd-kit/core"
-import { Done } from "./components/done/Done"
-import { InProgress } from "./components/inProgress/InProgress"
-import { ToDo } from "./components/todo/ToDo"
 import { useIssuesContext } from "./hooks/useIssuesContext"
 import { useEffect } from "react"
+import { Column } from "./components/columns/Column"
 
 function App() {
-    const { getIssues, getIssueProgressions, getProgressions } =
-        useIssuesContext()
+    const { getIssues, getProgressions } = useIssuesContext()
     useEffect(() => {
         getIssues()
-        getIssueProgressions()
+
         getProgressions()
         // get all state variables and set them
     }, [])
@@ -31,9 +28,13 @@ function App() {
     return (
         <div className="flex w-full justify-around">
             <DndContext onDragEnd={handleDragEnd}>
-                <ToDo />
+                {state.progressions.map((p) => (
+                    <Column key={p.id} progression={p} issues={state.issues} />
+                ))}
+
+                {/*  <ToDo />
                 <InProgress />
-                <Done />
+                <Done /> */}
             </DndContext>
         </div>
     )
