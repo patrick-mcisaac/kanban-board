@@ -1,16 +1,11 @@
-import { useEffect } from "react"
 import { useIssuesContext } from "../../hooks/useIssuesContext"
 
-export const ToDo = () => {
-    const { state, getIssues } = useIssuesContext()
-
-    useEffect(() => {
-        getIssues()
-    }, [])
+export const Done = () => {
+    const { state } = useIssuesContext()
     return (
         <div className="flex w-[25%] flex-col gap-3 border-1">
             {state.issues.map((i) => {
-                if (i.progressionId === 1) {
+                if (i.progressionId === 3) {
                     return (
                         <section
                             key={i.id}

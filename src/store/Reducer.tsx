@@ -1,11 +1,11 @@
-import { ActionTypes } from "./Actions"
+import type { ActionTypes } from "./Actions"
 import type { StateType } from "./Types"
 
 //TODO: assign type for action
 
-export const IssuesReducer = (state: StateType, action) => {
+export const IssuesReducer = (state: StateType, action: ActionTypes) => {
     switch (action.type) {
-        case ActionTypes.Initial:
+        case "Initial":
             return {
                 ...state,
                 issues: [...action.payload]
